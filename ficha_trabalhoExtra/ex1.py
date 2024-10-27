@@ -18,11 +18,9 @@ def romanNumeral(number):
     
     return result
 
-# Entrada do usuário
 numero = int(input("Escreva um número (1-999): "))
 
 while numero < 1 or numero > 999:
     numero = int(input("Escreva um número (1-999): "))
 
-# Exibe o numeral romano
 print(romanNumeral(numero))
