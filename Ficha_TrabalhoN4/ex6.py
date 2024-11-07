@@ -6,7 +6,7 @@ def searchNumber(lista, pesquisa):
 
     for index, num in enumerate(lista):
         if num == pesquisa:
-            listPos.append(index)
+            listPos.append(index+1)
     
     if len(listPos) >= 1:
         return f"Posições com o valor {pesquisa}: {listPos}"
