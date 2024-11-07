@@ -1,6 +1,9 @@
 import random
 
 def biggestValue(matrix):
+    """
+    Gets a matrix and returns the biggest value found
+    """
     maxRow = max(matrix)
     maxNumber = max(maxRow)
 
@@ -16,7 +19,7 @@ def biggestValue(matrix):
 
     match option:
         case 1:
-            initMatrix(matrix)
+            initMatrix(matrix=[])
         case 2:
             transposeMatrix(matrix)
         case 3:
@@ -25,6 +28,9 @@ def biggestValue(matrix):
             print("Inválido! ")
 
 def transposeMatrix(matrix):
+    """
+    Transposes a given matrix and prints it
+    """
     transposed_matrix = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
 
     for row in transposed_matrix:
@@ -40,7 +46,7 @@ def transposeMatrix(matrix):
 
     match option:
         case 1:
-            initMatrix(matrix)
+            initMatrix(matrix=[])
         case 2:
             transposeMatrix(matrix)
         case 3:
@@ -76,7 +82,7 @@ def initMatrix(matrix):
 
     match option:
         case 1:
-            initMatrix(matrix)
+            initMatrix(matrix=[])
         case 2:
             transposeMatrix(matrix)
         case 3:
