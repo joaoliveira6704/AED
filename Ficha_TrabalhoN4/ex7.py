@@ -1,14 +1,18 @@
-def pluviosidade(pluv, meses):
-    pluv.sort(reverse=True)
-
-    return pluv
+def pluviosidade(pluvMeses):
+    pluvSorted = sorted(pluvMeses, reverse=True)
+    
+    resultado = ""
+    for chuva, mes in pluvSorted:
+        resultado += f"{mes}: {chuva}\n"
+    
+    return resultado
 
 meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 
-listPluv = []
+mesesPluv = []
 
-for mes in meses:
-    valorPluv = int(input(f"Pluviosidade no mês de {mes}: "))
-    listPluv.append(valorPluv)
+for i in range(len(meses)):
+    valorPluv = int(input(f"Pluviosidade no mês de {meses[i]}: "))
+    mesesPluv.append((valorPluv, meses[i]))
 
-print(pluviosidade(listPluv, meses))
+print(pluviosidade(mesesPluv))
