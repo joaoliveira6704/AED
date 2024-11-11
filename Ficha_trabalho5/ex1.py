@@ -1,5 +1,3 @@
-import numpy as np
-
 matriz = []
 
 for i in range(3):
@@ -9,10 +7,13 @@ for i in range(3):
         matriz[i].append(addList)
 
 print("\n\nMatriz Original:")
-for num in matriz:
-    print(num)
+for i in range(len(matriz)):
+    for j in range(len(matriz[i])):
+        print(matriz[i][j], end=" ")
+    print()
 
 print("\n\nMatriz Transposta:")
-transpose= np.transpose(matriz)
-for num in transpose:
-    print(num)
+for i in range(len(matriz)):
+    for j in range(len(matriz[i])):
+        print(matriz[j][i], end=" ")
+    print()
