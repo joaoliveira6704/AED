@@ -41,7 +41,12 @@ def estadofila():
     
     lugaresLivres = 20 - lugaresOcupados
 
-    return f"{lugaresOcupados} lugares ocupados. {lugaresLivres} Lugares livres."
+    numSenha = ""
+
+    for num in filaDuplicate:
+        numSenha += str(num) + " "
+
+    return f"{lugaresOcupados} lugares ocupados. {lugaresLivres} Lugares livres.\n\nSenhas em espera: {numSenha}"
 
 
 def menu():
