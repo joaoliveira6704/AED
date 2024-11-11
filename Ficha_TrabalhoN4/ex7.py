@@ -2,12 +2,13 @@ def pluviosidade(pluvMeses):
     pluvSorted = sorted(pluvMeses, reverse=True)
     
     resultado = ""
+    print("\n\nMês:           Chuva:")
     for chuva, mes in pluvSorted:
-        resultado += f"{mes}: {chuva}\n"
+        resultado += f"{mes} ->   {chuva}\n"
     
     return resultado
 
-meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+meses = ['Janeiro   ', 'Fevereiro ', 'Março     ', 'Abril     ', 'Maio      ', 'Junho     ', 'Julho     ', 'Agosto    ', 'Setembro  ', 'Outubro   ', 'Novembro  ', 'Dezembro  ']
 
 mesesPluv = []
 
