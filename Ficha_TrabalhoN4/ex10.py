@@ -3,7 +3,11 @@ def tirarticket(fila):
 
     if pos < 20:
         fila.insert(pos, 1)
-        filaDuplicate.append(pos+1)
+        if len(filaDuplicate) == 0:
+            filaDuplicate.append(pos+1)
+        else:
+            maxNumList = max(filaDuplicate)
+            filaDuplicate.append(maxNumList+1)
         msg = f"Ticket tirado com sucesso com o número {pos+1}!"
     else:
         msg = "Fila cheia!"
