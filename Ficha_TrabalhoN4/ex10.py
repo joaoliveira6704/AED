@@ -1,4 +1,4 @@
-def tirarticket(fila):
+def tirarticket():
     pos = fila.index(0)
 
     if pos < 20:
@@ -14,7 +14,7 @@ def tirarticket(fila):
     
     return msg
 
-def atendimento(fila):
+def atendimento():
     exists = fila.count(1)
 
     if exists >= 1:
@@ -32,7 +32,7 @@ def atendimento(fila):
         
     return msg
 
-def estadofila(fila):
+def estadofila():
     lugaresOcupados = 0
 
     for valor in fila:
@@ -49,12 +49,13 @@ def menu():
     print("1 - Tirar Ticket")
     print("2 - Atendimento")
     print("3 - Estado da fila de espera")
+    print("4 - Mostrar menu novamente")
     print("0 - Sair")
 
     while True:
         try:
             opcao = int(input("Escolha uma opção: "))
-            if opcao > 3:
+            if opcao > 4:
                 raise IndexError
         except IndexError:
             print("Opção inexistente!!")
@@ -65,11 +66,13 @@ def menu():
                 case 0:
                     exit()
                 case 1:
-                    print(tirarticket(fila))
+                    print(tirarticket())
                 case 2:
-                    print(atendimento(fila))
+                    print(atendimento())
                 case 3:
-                    print(estadofila(fila))
+                    print(estadofila())
+                case 4:
+                    menu()
 
 fila = [0 for i in range(20)]
 filaDuplicate = []
