@@ -1,0 +1,9 @@
+Portugal;Europa
+Brazil;América
+Angola;África
+Espanha;Europa
+China;Ásia
+França;Europa
+Itália;Europa
+EUA;América
+EUA AMÉRICA;AMºERICA
