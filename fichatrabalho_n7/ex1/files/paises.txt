@@ -7,3 +7,4 @@ França;Europa
 Itália;Europa
 EUA;América
 EUA AMÉRICA;AMºERICA
+India;Ásia

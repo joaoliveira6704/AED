@@ -28,7 +28,7 @@ def consultarPaises():
     print("---------------------------------")
     for line in file:
         campos = line.split(";")
-        print("\t", campos[0], "\t\t", campos[1].strip("\n"))
+        print("\t", campos[0], "\t", campos[1].strip("\n"))
 
     file.close()
 
