@@ -9,6 +9,7 @@ def escreveTexto():
     texto1 = bytes(texto, encoding="utf-8")
     f.write(texto1)
     f.close()
+    menu()
 
 def lerTexto():
     f=open(ficheiro, "rb")
@@ -16,7 +17,8 @@ def lerTexto():
     texto = f.read()
     print(str(texto))
 
-    f.close
+    f.close()
+    menu()
 
 def menu():
     print("MENU")
