@@ -1,20 +1,20 @@
-#Número: A043242
+#Número: 40240391
 #Nome: João Oliveira
-#NOTA: MacOS, o os.system("clear") não deve funcionar no windows.
+#NOTA: MacOS, o os.system("cls") não deve funcionar no windows.
 import os
 
 def consultaDistancia():
     """Permite consultar as Datas e Tempos Registados para cada distância"""
-    os.system("clear")
+    os.system("cls")
 
     #Abre o ficheiro em modo leitura
-    ficheiro = open("atividades.txt", "r")
+    ficheiro = open("A043242/atividades.txt", "r")
 
     consulta = input("Consulta de: ")
 
     #Verifica se a consulta é feita com os valores (5k, 10k ou 21k)
     while consulta != "5k" and consulta != "10k" and consulta != "21k":
-        os.system("clear")
+        os.system("cls")
         consulta = input("Erro! Valores devem ser (5k, 10k, 21k)!\n\nConsulta de:")
     
     print("\t   Data\t\tTempo Registado")
@@ -32,10 +32,10 @@ def consultaDistancia():
 
 def melhoresTempos():
     """Mostra os melhores tempos para cada distância"""
-    os.system("clear")
+    os.system("cls")
 
     #Abre o ficheiro em modo leitura
-    ficheiro = open("atividades.txt", "r")
+    ficheiro = open("A043242/atividades.txt", "r")
 
     #Listas para guardar tempos por cada k: 5k, 10k ou 21k
     tempo5k = []
@@ -62,7 +62,7 @@ def melhoresTempos():
     data21k =""
 
     #Volta a percorrer o ficheiro "atividades.txt", compara os tempos e adiciona a data
-    ficheiro2 = open("atividades.txt", "r")
+    ficheiro2 = open("A043242/atividades.txt", "r")
     for line in ficheiro2:
         campos = line.split(";")
         tempo = float(campos[2].strip("\n"))
@@ -88,7 +88,7 @@ def progressoPessoal():
     if not os.path.exists("ficheiros"):
         os.mkdir("ficheiros")
 
-    f = open("ficheiros/progresso.txt", "w")
+    f = open("A043242/ficheiros/progresso.txt", "w")
 
     meses=["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
 
@@ -104,7 +104,7 @@ def progressoPessoal():
 
 #Correr sempre o menu
 while True:
-    os.system("clear")
+    os.system("cls")
     print("Menu")
     print("1 - Consulta por Distância")
     print("2 - Consulta Melhores Tempos")

@@ -15,7 +15,7 @@ def imageMoldura(image1):
                 pixelMap[i,j] = color
             if j > image1.height/2-5 and j < image1.height/2+5:
                 pixelMap[i,j] = color
-            if i > image1.wi1.pydth/2-5 and i < image1.width/2+5:
+            if i > image1.width/2-5 and i < image1.width/2+5:
                 pixelMap[i,j] = color
 
     image1.show()
