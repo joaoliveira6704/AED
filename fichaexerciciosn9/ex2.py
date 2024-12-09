@@ -9,7 +9,7 @@ if not os.path.exists(path):
 
 def calcularIMC():
     imc = (int(alturaCM.get())-100)-(int(alturaCM.get())-150)/int(k.get())
-    labelPesoFinal.configure(text = str(imc)) 
+    labelPesoFinal.configure(text = str(imc) + " KG") 
 
 # Inicializar app
 app = customtkinter.CTk()
