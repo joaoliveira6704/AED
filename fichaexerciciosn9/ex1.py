@@ -7,7 +7,7 @@ if not os.path.exists(path):
     os.mkdir(path)
 
 def saveNotes():
-    f=open(path+"texto.txt", "w")
+    f=open(path+"texto.txt", "a")
 
     f.write(notas.get("0.0", "end-1c"))
     
@@ -21,9 +21,8 @@ def clearNotes():
 
 def readNotes():
     f=open(path+"texto.txt", "r")
-
-    notas.delete("0.0", "end")
     lines = f.readlines()
+    notas.delete("0.0", "end")
     for line in lines:
         notas.insert("end",line)
 

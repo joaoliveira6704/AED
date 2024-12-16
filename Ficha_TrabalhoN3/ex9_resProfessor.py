@@ -1,6 +1,6 @@
 def printCharLine(texto, numCar):
 	while(len(texto)>numCar):
-		print(texto[0:numCar])
+		print(texto[:numCar])
 		texto=texto[numCar:]
 	print(texto)
 

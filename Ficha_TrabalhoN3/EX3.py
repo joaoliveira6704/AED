@@ -6,7 +6,7 @@ def capicua(text):
     if firstpart == secondpart_Invert:
         True
         capic = f"{text} é uma capicua"
-    else: 
+    else:
         False
         capic = f"{text} não é uma capicua"
     
